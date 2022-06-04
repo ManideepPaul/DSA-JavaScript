@@ -15,3 +15,12 @@ function productOfArray(array) {
 }
 
 productOfArray([1,2,3])
+
+
+//Colt steele's solution.
+function productOfArray(arr) {
+    if(arr.length === 0) return 1;
+    return arr[0] * productOfArray(arr.slice(1))
+}
+
+productOfArray([1,2,3])
