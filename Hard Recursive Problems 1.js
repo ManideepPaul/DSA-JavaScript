@@ -15,3 +15,10 @@ function reverse(str) {
 }
 
 reverse('hello')
+
+
+//This is the Colt Steele's solution.
+function reverse(str) {
+    if(str.length <= 0) return str;
+    return reverse(str.slice(1)) + str[0]
+}
