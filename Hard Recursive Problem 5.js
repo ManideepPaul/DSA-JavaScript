@@ -22,3 +22,15 @@ function capitalizeFirst(arr){
     helper(arr);
     return result;
 }
+
+capitalizeFirst(['car','taco','banana'])
+
+//This is using pure recursive method.
+function capitalizeFirst(arr){
+    let result = [];
+    if(arr.length === 0) return result;
+    result.push(arr[0][0].toUpperCase() + arr[0].substring(1))
+    return result = result.concat(arr.slice(1))
+}
+
+capitalizeFirst(['car','taco','banana'])
