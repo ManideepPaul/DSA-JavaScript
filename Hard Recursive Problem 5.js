@@ -10,3 +10,15 @@ function capitalizeFirst(arr) {
 }
 
 capitalizeFirst(['car','taco','banana'])
+
+//This is my solution using Helper Method recursion.
+function capitalizeFirst(arr){
+    let result = [];
+    function helper(arr2){
+        if(arr2.length === 0) return;
+        result.push(arr2[0][0].toUpperCase() + arr2[0].substring(1));
+        helper(arr2.slice(1))
+    }
+    helper(arr);
+    return result;
+}
