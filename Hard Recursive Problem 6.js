@@ -33,3 +33,19 @@ let obj1 = {
 }
 
 nestedEvenSum(obj1)
+
+//This is solved using pure recursive function got hint from Colt Steele's solution.
+function nestedEvenSum(obj){
+    let sum = 0;
+    for(const key in obj){
+        if(typeof(obj[key]) === 'number' && obj[key] % 2 === 0) {
+            sum += obj[key];
+        }
+        else if(typeof(obj[key]) === 'object') {
+            sum += nestedEvenSum(obj[key])
+        }
+    }
+    return sum;
+}
+
+nestedEvenSum(obj1)
