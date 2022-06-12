@@ -26,3 +26,22 @@ let obj1 = {
 }
 
 stringifyNumbers(obj1)
+
+//This is the second solution. In this solution we are not modifying the given object by assigining the the value to the new object.
+function stringifyNumbers(obj) {
+    let result = {};
+    for (let key in obj){
+        if(typeof(obj[key]) === "number") {
+            result[key] = obj[key].toString()
+        }
+        else if(typeof(obj[key]) === "object" && !Array.isArray(obj[key])){
+            result[key] = stringifyNumbers(obj[key])
+        }
+        else {
+            result[key] = obj[key];
+        }
+    }
+    return result;
+}
+
+stringifyNumbers(obj1)
