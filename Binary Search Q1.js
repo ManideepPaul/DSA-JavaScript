@@ -4,13 +4,13 @@
 function binarySearch(arr, num) {
     let left = 0;
     let right = arr.length - 1;
-    while(left <= right){
-        let center = Math.floor((left+right)/2);
-            if(arr[center] === num) return center;
-            else if(arr[center] < num) left = center + 1 ;
-            else if(arr[center] > num) right = center - 1 ;
+    while (left <= right) {
+        let center = Math.floor((left + right) / 2);
+        if (arr[center] < num) left = center + 1;
+        else if (arr[center] > num) right = center - 1;
+        else return center;
     }
     return -1;
 }
 
-binarySearch([1,2,3,4,5], 0)
+binarySearch([1, 2, 3, 4, 5], 0)
