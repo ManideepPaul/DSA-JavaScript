@@ -1,8 +1,8 @@
 //A sorting algorithm where the largest value bubble up to the top.
 
 function bubbleSort(arr){
-    for(let i = arr.length-1; i >= 0; i--){
-        for(let j = 0; j < i; j++){
+    for(let i = arr.length; i > 0; i--){
+        for(let j = 0; j < i - 1; j++){
             if(arr[j] > arr[j+1]){
                 let temp = arr[j];
                 arr[j] = arr[j+1];
@@ -10,8 +10,8 @@ function bubbleSort(arr){
             }
         }
     }
-    return arr;
-    // return console.log(arr);
+    // return arr;
+    return console.log(arr);
 }
 
 bubbleSort([3,1,9,10,6,77,43])
