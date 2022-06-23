@@ -5,6 +5,7 @@
 // => Continue to the next element and if it is in the incorrect order, iterate through the sorted portion (i.e. the left side) to place the element in the correct palce.
 // => Repeat until the array is sorted.
 
+//I don't know that if this is following insertion sort or not.
 const insertionSort = (arr) => {
     for(let i = 1; i < arr.length; i++){
         for(let j = 0; j < i; j++){
