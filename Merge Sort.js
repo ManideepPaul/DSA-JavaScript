@@ -10,7 +10,7 @@
     -> Once we axhuast one array, push in all remaining value from the other array. */
 
 
-// This is my solution
+// This is my solution using recursion.
 let result = [];
 function mergeArray(arr1, arr2){
     if(arr1.length === 0){
