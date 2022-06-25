@@ -1,4 +1,4 @@
-/*         Merging array pseducode
+/*         Merging sorted array pseducode
 
 -> Create an empty array, take a look at the smallest values in each input array.
 
