@@ -6,6 +6,15 @@
 
 -> Once the array has been merged back together, return the merged (and sorted!) array. */
 
+                            // Visual diagram how the code is working
+
+//   10.                                     [1,2,3,8]
+//   1.                             mergeSort([1, 3, 2, 8])
+//   5.              [1,3]             merge        9.              [2,8] 
+//   2.         mergeSort([1,3])                    6.          mergeSort([2,8])
+//   4.  [1]         merge       [3]                8.   [2]         merge          [8]
+//   3. mergeSort([1])   mergeSort([3])             7. mergeSort([2])    mergeSort([8])  
+
 function mergeSort(arr) {
     if(arr.length <= 1) return arr;
     let halfLength = Math.floor(arr.length / 2);
