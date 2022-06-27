@@ -8,9 +8,9 @@
 
 let arrays = []
 function mergeSort(arr) {
-    let halfLength = (arr.length - 1) / 2;
-    arrays.push(arr.slice(0, Math.floor(halfLength)));
-    arrays.push(arr.slice(Math.floor(halfLength), arr.length));
+    let halfLength = Math.floor(arr.length / 2);
+    arrays.push(arr.slice(0, halfLength));
+    arrays.push(arr.slice(halfLength));
 }
 
 mergeSort([1, 3, 2, 8, 67, 23, 34, 54, 12])
