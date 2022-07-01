@@ -14,19 +14,17 @@
 
 -> Return the pivot index. */
 
-function pivot(arr){
-    let pivotIndex = 0;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[0] > arr[i]){
-            if(i === 1){pivotIndex++;}
-            else{
-                pivotIndex++;
-                [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]]
-            } 
+function pivot(arr, start = 0, end = arr.length) {
+    let pivotIndex = start;
+    for (let i = 0; i < end; i++) {
+        if (arr[0] > arr[i]) {
+            pivotIndex++;
+            [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]]
         }
     }
     [arr[0], arr[pivotIndex]] = [arr[pivotIndex], arr[0]];
     console.log(arr, pivotIndex)
+    return pivotIndex;
 }
 
-pivot([5,2,1,3,6,4])
+pivot([5, 2, 1, 3, 6, 4])
