@@ -6,7 +6,15 @@ function getDigit(num, place) {
         reqDigit = num % 10
         num = (num - (num % 10)) / 10
     }
-    return reqDigit;
+    return Math.abs(reqDigit);
 }
 
-console.log(getDigit(4, 4))
+console.log(getDigit(-234, 1))
+
+
+// Solution from stackoverflow
+function getDigit1(num, place){
+    return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+}
+
+console.log(getDigit1(-234, 4))
