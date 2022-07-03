@@ -12,3 +12,11 @@ function count(num) {
 }
 
 console.log(count(123))
+
+// Solution from stackoverflow
+function countNumber(num) {
+    if(num === 0) return 1;
+    return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+
+console.log(countNumber(12345))
