@@ -9,6 +9,7 @@ class Student {
         this.last = lastName;
         this.age = age;
         this.absence = 0;
+        this.score = [];
     }
 
     // This is a method on individual instance.
@@ -18,6 +19,14 @@ class Student {
     }
     fullName(){
         console.log(`Your full name is ${this.first} ${this.last}`)
+    }
+    addScore(score){
+        this.score.push(score)
+        console.log(this.score)
+    }
+    calcAverageScore(){
+        let total = this.score.reduce((a,b) => a+b)
+        console.log(Math.round(total/this.score.length))
     }
 }
 
@@ -35,5 +44,9 @@ console.log(student1.first, student1.last, student1.age)
 /* Note    ->  When "this" used inside a constructor then "this" refers to individual instances of that class. Ex - student1 is an individual instance. */
 
 student1.absentDay() // You can call methods on individual instance like this.
-student1.absentDay()
 student1.fullName()
+student1.addScore(91)
+student1.addScore(95)
+student1.addScore(98)
+student1.calcAverageScore()
+
