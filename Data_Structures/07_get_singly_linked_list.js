@@ -83,11 +83,9 @@ class SinglyLinkedList{
 
     get(index){
         if((index < 0) || (index > this.length)) return null;
-        let step;
+        let step = 0;
         let current = this.head;
-        let pre;
         while(step < index){
-            pre = current;
             current = current.next;
             step++
         }
@@ -100,5 +98,5 @@ newList.push('hello')
 newList.push('there')
 newList.push('whats up')
 
-console.log(newList.get(2))
-console.log(newList)
+console.log(newList.get(-1))
+// console.log(newList)
