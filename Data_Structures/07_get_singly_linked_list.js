@@ -43,8 +43,8 @@ class SinglyLinkedList{
             current = current.next; // This will be popped off
         }
 
-        this.tail.next = null;
         this.tail = pre;
+        this.tail.next = null;
         this.length--;
         if(this.length === 0){
             this.head = null;
